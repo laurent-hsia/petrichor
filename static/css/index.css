@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(to top, #000000, #dacfb0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:#f5f5e1
+}
+
+.smoke {
+   
+    transition: opacity 0.5s ease; 
+}
