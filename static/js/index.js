@@ -8,11 +8,11 @@ textElements.forEach((text, index) => {
     gsap.to(text, {
         //color: "black", 
         //y: -50,         
-        opacity: 0,     
+        opacity: 1,     
         scrollTrigger: {
             trigger: text,       
-            start: "top 40%", 
-            end: "top 20%",     
+            start: "top 60%", 
+            end: "top 70%",     
             scrub: true,          
         },
     });
@@ -41,6 +41,39 @@ gsap.timeline({ repeat: -1, repeatDelay: 0 })
 .to(targetText, {
   duration: 0.75,
   
+  // opacity: 1,
+  ease: "power2.out",
+});
+
+
+const salute = document.getElementById("salutation");
+
+gsap.timeline({ repeat: -1, repeatDelay: 0 })
+.to(salute, {
+  duration: 0.75,
+  
+  // opacity: 0,
+  onComplete: () => {
+    if(salute.textContent === "scientists.") {
+      salute.textContent = "artists.      ";
+    }
+    else if(salute.textContent === "artists.      ") {
+      salute.textContent = "engineers.    ";
+    }
+    else if(salute.textContent === "engineers.    ") {
+      salute.textContent = "designers.    ";
+    }
+    else if(salute.textContent === "designers.    ") {
+      salute.textContent = "litterateurs.";
+    }
+    else if(salute.textContent === "litterateurs.") {
+      salute.textContent = "scientists.   ";
+    }
+    
+  },
+})
+.to(salute, {
+  duration: 0.75,
   // opacity: 1,
   ease: "power2.out",
 });
