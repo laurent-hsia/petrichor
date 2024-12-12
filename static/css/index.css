@@ -10,3 +10,16 @@ body {
    
     transition: opacity 0.5s ease; 
 }
+
+.switch_text {
+    color:#f5f5e1;
+    font-weight: bold;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+  
+  .switch_text:hover {
+    background-color: orange;
+    color: white;
+  }
