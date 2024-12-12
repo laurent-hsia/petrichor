@@ -41,7 +41,7 @@ body {
 .smoke-twn {
   
   transition: opacity 0.5s ease; 
-  opacity: 0;
+  opacity: 1;
 }
 
 .switch_text-en{
@@ -84,6 +84,6 @@ body {
 }
 
 .BDCimage-twn{
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s ease;
 }

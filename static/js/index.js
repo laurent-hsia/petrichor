@@ -1,58 +1,94 @@
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 
-// const textElements = gsap.utils.toArray('.smoke');
+const textElements = gsap.utils.toArray('.smoke-en');
 
-// textElements.forEach((text, index) => {
-//     gsap.to(text, {
-//         //color: "black", 
-//         //y: -50,         
-//         opacity: 1,     
-//         scrollTrigger: {
-//             trigger: text,       
-//             start: "top 60%", 
-//             end: "top 70%",     
-//             scrub: true,          
-//         },
-//     });
-// });
+textElements.forEach((text, index) => {
+    gsap.to(text, {
+        //color: "black", 
+        //y: -50,         
+        opacity: 1,     
+        scrollTrigger: {
+            trigger: text,       
+            start: "top 60%", 
+            end: "top 70%",     
+            scrub: true,          
+        },
+    });
+});
 
-// const image = document.querySelector('.BDCimage');
-// gsap.to(image, {
-//     opacity: 1,
-//     scrollTrigger: {
-//         trigger: image,
-//         start: "top 60%",
-//         end: "top 70%",
-//         scrub: true,
-//         toggleActions: "play reverse play reverse",
-//     },
-// });
+const image = document.querySelector('.BDCimage-en');
+gsap.to(image, {
+    opacity: 1,
+    scrollTrigger: {
+        trigger: image,
+        start: "top 60%",
+        end: "top 70%",
+        scrub: true,
+        toggleActions: "play reverse play reverse",
+    },
+});
 
  
 
-// const targetText = document.querySelector(".switch_text");
+const targetText = document.querySelector(".switch_text-en");
 
-// gsap.timeline({ repeat: -1, repeatDelay: 0 })
-// .to(targetText, {
-//   duration: 0.75,
+gsap.timeline({ repeat: -1, repeatDelay: 0 })
+.to(targetText, {
+  duration: 0.75,
   
-//   // opacity: 0,
-//   onComplete: () => {
-//     targetText.textContent =
-//       targetText.textContent === "scientists"
-//         ? "artists"
-//         : "scientists"; 
-//   },
-// })
-// .to(targetText, {
-//   duration: 0.75,
+  // opacity: 0,
+  onComplete: () => {
+    targetText.textContent =
+      targetText.textContent === "scientists"
+        ? "artists"
+        : "scientists"; 
+  },
+})
+.to(targetText, {
+  duration: 0.75,
   
-//   // opacity: 1,
-//   ease: "power2.out",
-// });
+  // opacity: 1,
+  ease: "power2.out",
+});
 
-// const targetTextTW = document.querySelector(".switch_textTW");
+
+
+
+const salute = document.getElementById("salutation-en");
+
+gsap.timeline({ repeat: -1, repeatDelay: 0 })
+.to(salute, {
+  duration: 0.75,
+  
+  // opacity: 0,
+  onComplete: () => {
+    if(salute.textContent === "scientists") {
+      salute.textContent = "artists";
+    }
+    else if(salute.textContent === "artists") {
+      salute.textContent = "engineers";
+    }
+    else if(salute.textContent === "engineers") {
+      salute.textContent = "designers";
+    }
+    else if(salute.textContent === "designers") {
+      salute.textContent = "litterateurs";
+    }
+    else if(salute.textContent === "litterateurs") {
+      salute.textContent = "scientists";
+    }
+    
+  },
+})
+.to(salute, {
+  duration: 0.75,
+  // opacity: 1,
+  ease: "power2.out",
+});
+
+//-------------------------------------------中文動畫
+// const targetTextTW = document.querySelector(".switch_text-twn");
 
 // gsap.timeline({ repeat: -1, repeatDelay: 0 })
 // .to(targetTextTW, {
@@ -73,41 +109,7 @@
 //   ease: "power2.out",
 // });
 
-
-// const salute = document.getElementById("salutation");
-
-// gsap.timeline({ repeat: -1, repeatDelay: 0 })
-// .to(salute, {
-//   duration: 0.75,
-  
-//   // opacity: 0,
-//   onComplete: () => {
-//     if(salute.textContent === "scientists") {
-//       salute.textContent = "artists";
-//     }
-//     else if(salute.textContent === "artists") {
-//       salute.textContent = "engineers";
-//     }
-//     else if(salute.textContent === "engineers") {
-//       salute.textContent = "designers";
-//     }
-//     else if(salute.textContent === "designers") {
-//       salute.textContent = "litterateurs";
-//     }
-//     else if(salute.textContent === "litterateurs") {
-//       salute.textContent = "scientists";
-//     }
-    
-//   },
-// })
-// .to(salute, {
-//   duration: 0.75,
-//   // opacity: 1,
-//   ease: "power2.out",
-// });
-
-
-// const saluteTW = document.getElementById("salutationTW");
+// const saluteTW = document.getElementById("salutation-twn");
 
 // gsap.timeline({ repeat: -1, repeatDelay: 0 })
 // .to(saluteTW, {
@@ -139,104 +141,109 @@
 //   ease: "power2.out",
 // });
 
-gsap.registerPlugin(ScrollTrigger);
 
-// 動畫實例存儲變數
-let smokeAnimations = [];
-let imageAnimation = null;
-let switchAnimation = null;
 
-// 初始化動畫函數
-function initializeAnimations(language) {
-    // 清理舊的動畫
-    clearAllAnimations();
 
-    // 初始化 `smoke` 動畫
-    const smokeElements = gsap.utils.toArray(`.smoke-${language}`);
-    smokeElements.forEach((element) => {
-        const animation = gsap.to(element, {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: element,
-                start: "top 60%",
-                end: "top 70%",
-                scrub: true,
-            },
-        });
-        smokeAnimations.push(animation);
-    });
 
-    // 初始化 `image` 動畫
-    const imageElement = document.querySelector(`.BDCimage-${language}`);
-    if (imageElement) {
-        imageAnimation = gsap.to(imageElement, {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: imageElement,
-                start: "top 60%",
-                end: "top 70%",
-                scrub: true,
-                toggleActions: "play reverse play reverse",
-            },
-        });
-    }
+//-------------------------------------------尚未修復-------------------------------------------
+// gsap.registerPlugin(ScrollTrigger);
 
-    // 初始化 `switch` 動畫
-    const switchElement = document.querySelector(`.switch_text-${language}`);
-    if (switchElement) {
-        switchAnimation = gsap.timeline({ repeat: -1, repeatDelay: 0 })
-            .to(switchElement, {
-                duration: 0.75,
-                onComplete: () => {
-                    const texts =
-                        language === "en"
-                            ? ["scientists", "artists"]
-                            : ["科學家們", "藝術家們"];
-                    const currentIndex = texts.indexOf(switchElement.textContent);
-                    const nextIndex = (currentIndex + 1) % texts.length;
-                    switchElement.textContent = texts[nextIndex];
-                },
-            })
-            .to(switchElement, {
-                duration: 0.75,
-                ease: "power2.out",
-            });
-    }
+// // 動畫實例存儲變數
+// let smokeAnimations = [];
+// let imageAnimation = null;
+// let switchAnimation = null;
 
-        // 初始化 `salutation` 動畫
-    const salutationElement = document.querySelector(`#salutation-${language}`);
-    if (salutationElement) {
-        const salutationTexts =
-            language === "en"
-                ? ["scientists", "artists", "engineers", "designers", "litterateurs"]
-                : ["科學家們", "藝術家們", "工程師們", "設計師們", "文學家們"];
+// // 初始化動畫函數
+// function initializeAnimations(language) {
+//     // 清理舊的動畫
+//     clearAllAnimations();
 
-        salutationAnimation = gsap.timeline({ repeat: -1, repeatDelay: 0 })
-            .to(salutationElement, {
-                duration: 0.75,
-                onComplete: () => {
-                    const currentIndex = salutationTexts.indexOf(salutationElement.textContent);
-                    const nextIndex = (currentIndex + 1) % salutationTexts.length;
-                    salutationElement.textContent = salutationTexts[nextIndex];
-                },
-            })
-            .to(salutationElement, {
-                duration: 0.75,
-                ease: "power2.out",
-            });
-    }
-}
+//     // 初始化 `smoke` 動畫
+//     const smokeElements = gsap.utils.toArray(`.smoke-${language}`);
+//     smokeElements.forEach((element) => {
+//         const animation = gsap.to(element, {
+//             opacity: 1,
+//             scrollTrigger: {
+//                 trigger: element,
+//                 start: "top 60%",
+//                 end: "top 70%",
+//                 scrub: true,
+//             },
+//         });
+//         smokeAnimations.push(animation);
+//     });
 
-// 清理所有動畫
-function clearAllAnimations() {
-    smokeAnimations.forEach((animation) => animation.kill());
-    smokeAnimations = [];
-    if (imageAnimation) {
-        imageAnimation.kill();
-        imageAnimation = null;
-    }
-    if (switchAnimation) {
-        switchAnimation.kill();
-        switchAnimation = null;
-    }
-}
+//     // 初始化 `image` 動畫
+//     const imageElement = document.querySelector(`.BDCimage-${language}`);
+//     if (imageElement) {
+//         imageAnimation = gsap.to(imageElement, {
+//             opacity: 1,
+//             scrollTrigger: {
+//                 trigger: imageElement,
+//                 start: "top 60%",
+//                 end: "top 70%",
+//                 scrub: true,
+//                 toggleActions: "play reverse play reverse",
+//             },
+//         });
+//     }
+
+//     // 初始化 `switch` 動畫
+//     const switchElement = document.querySelector(`.switch_text-${language}`);
+//     if (switchElement) {
+//         switchAnimation = gsap.timeline({ repeat: -1, repeatDelay: 0 })
+//             .to(switchElement, {
+//                 duration: 0.75,
+//                 onComplete: () => {
+//                     const texts =
+//                         language === "en"
+//                             ? ["scientists", "artists"]
+//                             : ["科學家們", "藝術家們"];
+//                     const currentIndex = texts.indexOf(switchElement.textContent);
+//                     const nextIndex = (currentIndex + 1) % texts.length;
+//                     switchElement.textContent = texts[nextIndex];
+//                 },
+//             })
+//             .to(switchElement, {
+//                 duration: 0.75,
+//                 ease: "power2.out",
+//             });
+//     }
+
+//         // 初始化 `salutation` 動畫
+//     const salutationElement = document.querySelector(`#salutation-${language}`);
+//     if (salutationElement) {
+//         const salutationTexts =
+//             language === "en"
+//                 ? ["scientists", "artists", "engineers", "designers", "litterateurs"]
+//                 : ["科學家們", "藝術家們", "工程師們", "設計師們", "文學家們"];
+
+//         salutationAnimation = gsap.timeline({ repeat: -1, repeatDelay: 0 })
+//             .to(salutationElement, {
+//                 duration: 0.75,
+//                 onComplete: () => {
+//                     const currentIndex = salutationTexts.indexOf(salutationElement.textContent);
+//                     const nextIndex = (currentIndex + 1) % salutationTexts.length;
+//                     salutationElement.textContent = salutationTexts[nextIndex];
+//                 },
+//             })
+//             .to(salutationElement, {
+//                 duration: 0.75,
+//                 ease: "power2.out",
+//             });
+//     }
+// }
+
+// // 清理所有動畫
+// function clearAllAnimations() {
+//     smokeAnimations.forEach((animation) => animation.kill());
+//     smokeAnimations = [];
+//     if (imageAnimation) {
+//         imageAnimation.kill();
+//         imageAnimation = null;
+//     }
+//     if (switchAnimation) {
+//         switchAnimation.kill();
+//         switchAnimation = null;
+//     }
+// }
