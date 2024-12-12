@@ -8,11 +8,11 @@ textElements.forEach((text, index) => {
     gsap.to(text, {
         //color: "black", 
         //y: -50,         
-        opacity: 0,     
+        opacity: 1,     
         scrollTrigger: {
             trigger: text,       
-            start: "top 40%", 
-            end: "top 20%",     
+            start: "top 60%", 
+            end: "top 70%",     
             scrub: true,          
         },
     });
