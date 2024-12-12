@@ -32,4 +32,4 @@ def pages(page):
 
 # Main Function, Runs at http://127.0.0.1:8080
 if __name__ == "__main__":
-    app.run(port=8080,debug=True)
+    app.run(port=80,debug=True,host='0.0.0.0')
