@@ -27,25 +27,45 @@ body {
   color: black;
 }
 
-.weight_bold {
+.weight_bold{
   font-weight: bold;
   text-decoration: underline;
 }
 
-.smoke {
+.smoke-en{
   
   transition: opacity 0.5s ease; 
   opacity: 0;
 }
 
-.switch_text {
+.smoke-twn {
+  
+  transition: opacity 0.5s ease; 
+  opacity: 0;
+}
+
+.switch_text-en{
+  color:black;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.switch_text-twn{
   color:black;
   font-weight: bold;
   cursor: pointer;
   display: inline-block;
 }
   
-#salutation {
+#salutation-en{
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#salutation-twn{
   color: black;
   font-weight: bold;
   cursor: pointer;
@@ -55,8 +75,15 @@ body {
 #application_form{
   color:rgb(109, 123, 120);
   text-decoration: underline;
+  font-weight: bold;
 }
 
+.BDCimage-en{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
-
-
+.BDCimage-twn{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
