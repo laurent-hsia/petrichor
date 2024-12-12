@@ -18,10 +18,6 @@ textElements.forEach((text, index) => {
     });
 });
 
-  
-
-
-
  
 // const container = document.querySelector(".switch_container");
 const targetText = document.querySelector(".switch_text");
@@ -255,8 +251,3 @@ gsap.timeline({ repeat: -1, repeatDelay: 0 })
 //     },
 //   });
 // });
-
-
-
-    
-    
