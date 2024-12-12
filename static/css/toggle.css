@@ -9,11 +9,11 @@
   
   .slider-cradle {
     display: flex;
-    width: 100px;
+    width: 64px;
     text-align: center;
     border-radius: 3px;
     background: #cacaca;
-    height: 50px;
+    height: 32px;
     position: relative;
     overflow: hidden;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.4);
@@ -21,14 +21,17 @@
   }
   .slider-cradle .option-1 {
     width: 50%;
+    font-size: small;
+    margin-bottom: 3px;
   }
   .slider-cradle .option-2 {
     width: 50%;
+    font-size: small;
   }
   .slider-cradle .handle {
     cursor: pointer;
-    width: 46px;
-    height: 46px;
+    width: 27px;
+    height: 27px;
     border-radius: 3px;
     position: absolute;
     background: white;
@@ -46,5 +49,5 @@
     background: #cacaca;
   }
   .slider-cradle.is-transitioned .handle {
-    transform: translateX(50px);
+    transform: translateX(32px);
   }
