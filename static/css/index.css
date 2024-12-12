@@ -1,25 +1,27 @@
 body {
-    background: linear-gradient(to top, #000000, #dacfb0);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color:#f5f5e1
+  /* background: linear-gradient(to top, #000000, #dacfb0); */
+  background-image: url('../img/bg.jpg');
+  background-position: bottom -25vh right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: black;
 }
 
 .smoke {
-   
-    transition: opacity 0.5s ease; 
+  
+  transition: opacity 0.5s ease; 
 }
 
 .switch_text {
-    color:#f5f5e1;
-    font-weight: bold;
-    cursor: pointer;
-    font-weight: bold;
-    display: inline-block;
+  color:#f5f5e1;
+  font-weight: bold;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
 }
   
-  .switch_text:hover {
-    background-color: orange;
-    color: white;
-  }
+.switch_text:hover {
+  background-color: orange;
+  color: white;
+}
