@@ -6,6 +6,7 @@
     <title>Asylum Ventures</title>
     <link href="{{ url_for('static', filename = 'css/tailwind.min.css')}}" rel="stylesheet">
     <link href="{{ url_for('static', filename = 'css/index.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/toggle.css')}}" rel="stylesheet">
 </head>
 <body cz-shortcut-listen="true">
     <div class = "site-wrapper">
@@ -19,13 +20,20 @@
                                     <div class="flex flex-col items-center space-y-4">
 
                                         <h1 class="text-sm mt-4 mb-8 tracking-widest w-1/3 text-center cursor-pointer">
-                                            <div class="grid grid-cols-6 grid-rows-4">
+                                            <!-- <div class="grid grid-cols-6 grid-rows-4">
                                                 <span class="col-start-1 row-start-1">A</span>
                                                 <span class="col-start-3 row-start-2">Y</span>
                                                 <span class="col-start-2 row-start-4">S</span>
                                                 <span class="col-start-5 row-start-3">U</span>
                                                 <span class="col-start-5 row-start-2">L</span>
                                                 <span class="col-start-6 row-start-4">M</span>
+                                            </div> -->
+                                            <div class="flex-cradle">
+                                                <div class="slider-cradle">
+                                                <div class="option-1">EN</div>
+                                                <div class="option-2">中文</div>
+                                                <div class="handle"></div>
+                                              </div>	
                                             </div>
                                         </h1>
 
@@ -69,7 +77,7 @@
                                     <section class="max-w-3xl mx-auto text-sm text-justify space-y-4">
 
                                        
-                                        <h2 class="text-center uppercase tracking-wider smoke">For the scientists/artists/engineers/designers/litterateurs.</h2>
+                                        <h2 class="text-center tracking-wider smoke">For the scientists/artists/engineers/designers/litterateurs.</h2>
 
                                         <article class = "smoke">
                                             <p>Based in Taipei, Taiwan, petrichor is an experimental learning space.</p>
@@ -87,12 +95,31 @@
                                         <article class = "smoke switch_container">
                                             <p>As traditional education continues to cultivate vocational thinking caused by hyper-specialization induced fragmentation,
                                                  we want to picture a generation of cross-disciplinary thinkers. We believe that a recognition of how seemingly divergent disciplines 
-                                                 interplay to create is important for the next generation of <span class = "switch_text">scientists / artists</span>. </p>
+                                                 interplay to create is important for the next generation of <span class = "switch_text">scientists</span>. </p>
                                         </article>
 
-                                        <h2 class="text-center uppercase tracking-wider smoke ">Into the Asylum</h2>
+                                        <h2 class="text-center tracking-wider smoke ">Our First Program: Biotech x Design x Art </h2>
 
-                                        <section class="grid md:grid-cols-2 gap-8 smoke">
+
+                                        <article class = "smoke">
+                                            <p>Our first program offering is a research-based biotechnology-centric program that interplays design and art for students in highschool / 
+                                                of highschool age; we hope to gather a group of creative people that have the courage to imagine beyond the traditional classroom, beyond 
+                                                the internet’s “givens”—to not just solve problems predefined for them, but to understand the world more deeply, so as to discover what they really matters to them.</p>
+                                        </article>
+
+                                        <article class = "smoke">
+                                            <p>Like AI, biotechnology is undoubtedly going to play a big role in the years to come. It is more important now to imagine, with a creative mind, what it can become.</p>
+                                        </article>
+
+                                        <article class = "smoke">
+                                            <p>Students in this program will have the opportunity to participate in two competitions: BDC (Biodesign Challenge) & iGEM (international Genetically Engineered Machine). 
+                                                While competitions and their results are not the destination, if done right, they can catalyze creative thinking and innovation, allowing ideas to manifest.</p>
+                                        </article>
+
+                                        <h2 class="text-center tracking-wider smoke ">If this sounds like something you are interested in, </h2>
+
+                                        <h2 class="text-center tracking-wider smoke ">please fill out this <a href="">application form.</a></h2>
+                                        <!-- <section class="grid md:grid-cols-2 gap-8 smoke">
                                             <div>
                                                 <p>We think it means:</p>
                                                 <ul class="list-disc pl-5">
@@ -106,7 +133,7 @@
                                                     <li>A source of calm, trust, and support for founders who are manifesting beauty through one of the hardest things you can do: starting a company.</li>
                                                 </ul>
                                             </div>
-                                        </section>
+                                        </section> -->
 
                                         <section class="text-center space-y-4 py-8 ">
                                             <div class = "smoke">More beauty and craft, less factory line</div>
@@ -151,5 +178,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <script src="{{ url_for('static', filename = 'js/index.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename = 'js/toggle.js')}}"></script>
+    
 </body>
 </html>

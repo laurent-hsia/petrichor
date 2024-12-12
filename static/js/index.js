@@ -23,8 +23,27 @@ textElements.forEach((text, index) => {
 
 
  
-const container = document.querySelector(".switch_container");
+// const container = document.querySelector(".switch_container");
 const targetText = document.querySelector(".switch_text");
+
+gsap.timeline({ repeat: -1, repeatDelay: 0 })
+.to(targetText, {
+  duration: 0.75,
+  
+  // opacity: 0,
+  onComplete: () => {
+    targetText.textContent =
+      targetText.textContent === "scientists"
+        ? "artists"
+        : "scientists"; 
+  },
+})
+.to(targetText, {
+  duration: 0.75,
+  
+  // opacity: 1,
+  ease: "power2.out",
+});
 
 // container.addEventListener("mouseenter", () => {
 //   gsap.to(targetText, {
@@ -141,39 +160,39 @@ const targetText = document.querySelector(".switch_text");
 // });
 
 // 3D flip
-container.addEventListener("mouseenter", () => {
-  gsap.to(targetText, {
-    duration: 0.5,
-    rotationY: 90,
-    opacity: 0,
-    onComplete: () => {
-      targetText.textContent = "artist / scientist";
-      gsap.fromTo(
-        targetText,
-        { rotationY: -90, opacity: 0 },
-        { duration: 0.5, rotationY: 0, opacity: 1, ease: "power2.out" }
-      );
-    },
-  });
-});
+// container.addEventListener("mouseenter", () => {
+//   gsap.to(targetText, {
+//     duration: 0.5,
+//     rotationY: 90,
+//     opacity: 0,
+//     onComplete: () => {
+//       targetText.textContent = "artist / scientist";
+//       gsap.fromTo(
+//         targetText,
+//         { rotationY: -90, opacity: 0 },
+//         { duration: 0.5, rotationY: 0, opacity: 1, ease: "power2.out" }
+//       );
+//     },
+//   });
+// });
 
-container.addEventListener("mouseleave", () => {
-  gsap.to(targetText, {
-    duration: 0.5,
-    rotationY: 90,
-    opacity: 0,
-    onComplete: () => {
-      targetText.textContent = "scientist / artist";
-      gsap.fromTo(
-        targetText,
-        { rotationY: -90, opacity: 0 },
-        { duration: 0.5, rotationY: 0, opacity: 1, ease: "power2.out" }
-      );
-    },
-  });
-});
+// container.addEventListener("mouseleave", () => {
+//   gsap.to(targetText, {
+//     duration: 0.5,
+//     rotationY: 90,
+//     opacity: 0,
+//     onComplete: () => {
+//       targetText.textContent = "scientist / artist";
+//       gsap.fromTo(
+//         targetText,
+//         { rotationY: -90, opacity: 0 },
+//         { duration: 0.5, rotationY: 0, opacity: 1, ease: "power2.out" }
+//       );
+//     },
+//   });
+// });
 
-// // 字母逐個浮動切換
+// 字母逐個浮動切換
 // container.addEventListener("mouseenter", () => {
 //   gsap.to(targetText, {
 //     duration: 0.3,
@@ -203,6 +222,8 @@ container.addEventListener("mouseleave", () => {
 //     },
 //   });
 // });
+
+
 
     
     
