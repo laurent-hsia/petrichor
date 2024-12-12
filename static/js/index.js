@@ -54,7 +54,7 @@ gsap.timeline({ repeat: -1, repeatDelay: 0 })
   
   // opacity: 0,
   onComplete: () => {
-    if(salute.textContent === "scientists.") {
+    if(salute.textContent === "scientists.   ") {
       salute.textContent = "artists.      ";
     }
     else if(salute.textContent === "artists.      ") {
