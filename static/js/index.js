@@ -54,20 +54,20 @@ gsap.timeline({ repeat: -1, repeatDelay: 0 })
   
   // opacity: 0,
   onComplete: () => {
-    if(salute.textContent === "scientists.   ") {
-      salute.textContent = "artists.      ";
+    if(salute.textContent === "scientists") {
+      salute.textContent = "artists";
     }
-    else if(salute.textContent === "artists.      ") {
-      salute.textContent = "engineers.    ";
+    else if(salute.textContent === "artists") {
+      salute.textContent = "engineers";
     }
-    else if(salute.textContent === "engineers.    ") {
-      salute.textContent = "designers.    ";
+    else if(salute.textContent === "engineers") {
+      salute.textContent = "designers";
     }
-    else if(salute.textContent === "designers.    ") {
-      salute.textContent = "litterateurs.";
+    else if(salute.textContent === "designers") {
+      salute.textContent = "litterateurs";
     }
-    else if(salute.textContent === "litterateurs.") {
-      salute.textContent = "scientists.   ";
+    else if(salute.textContent === "litterateurs") {
+      salute.textContent = "scientists";
     }
     
   },
