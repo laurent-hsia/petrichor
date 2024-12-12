@@ -14,6 +14,8 @@
   src: url("../fonts/ubuntu_mono/UbuntuMono-Bold.ttf") format('truetype');
 }
 
+
+
 body {
   /* background: linear-gradient(to top, #000000, #dacfb0); */
   font-family: "UbuntuMono", sans-serif;
@@ -25,7 +27,10 @@ body {
   color: black;
 }
 
-
+.weight_bold {
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 .smoke {
   
