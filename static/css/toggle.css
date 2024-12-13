@@ -22,7 +22,6 @@
   .slider-cradle .option-1 {
     width: 50%;
     font-size: small;
-    margin-bottom: 3px;
     /* color: #cacaca; */
   }
   .slider-cradle .option-2 {
@@ -33,7 +32,7 @@
   .slider-cradle .handle {
     cursor: pointer;
     width: 27px;
-    height: 27px;
+    height: 28.5px;
     border-radius: 3px;
     position: absolute;
     background: white;
@@ -51,5 +50,5 @@
     background: #cacaca;
   }
   .slider-cradle.is-transitioned .handle {
-    transform: translateX(32px);
+    transform: translateX(33px);
   }
