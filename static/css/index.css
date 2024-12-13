@@ -43,40 +43,31 @@ body {
   text-decoration: underline;
 }
 
-.smoke-en{
+.smoke{
   
   transition: opacity 0.5s ease; 
   opacity: 0;
 }
 
-.smoke-twn {
-  
-  transition: opacity 0.5s ease; 
-  opacity: 1;
-}
 
-.switch_text-en{
+
+.switch_text{
   color:black;
   font-weight: bold;
   cursor: pointer;
   display: inline-block;
 }
 
-.switch_text-twn{
-  color:black;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
-}
+
   
-#salutation-en{
+.salutation-en{
   color: black;
   font-weight: bold;
   cursor: pointer;
   display: inline-block;
 }
 
-#salutation-twn{
+.salutation-twn{
   color: black;
   font-weight: bold;
   cursor: pointer;
@@ -89,12 +80,8 @@ body {
   font-weight: bold;
 }
 
-.BDCimage-en{
+.BDCimage{
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.BDCimage-twn{
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}

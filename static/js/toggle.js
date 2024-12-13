@@ -14,6 +14,7 @@ $(".slider-cradle").click(function () {
       localStorage.setItem('lang',"twn");
     }
      
+    ScrollTrigger.refresh();
 });
 
 // $(".slider-cradle").click(function () {

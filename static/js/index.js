@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
-const textElements = gsap.utils.toArray('.smoke-en');
+const textElements = gsap.utils.toArray('.smoke');
 
 textElements.forEach((text, index) => {
     gsap.to(text, {
@@ -17,45 +17,58 @@ textElements.forEach((text, index) => {
     });
 });
 
-const image = document.querySelector('.BDCimage-en');
-gsap.to(image, {
-    opacity: 1,
-    scrollTrigger: {
-        trigger: image,
-        start: "top 60%",
-        end: "top 70%",
-        scrub: true,
-        toggleActions: "play reverse play reverse",
-    },
+const images = document.querySelectorAll('.BDCimage');
+images.forEach((image) => {
+  gsap.to(image, {
+      opacity: 1,
+      scrollTrigger: {
+          trigger: image,
+          start: "top 60%",
+          end: "top 70%",
+          scrub: true,
+          toggleActions: "play reverse play reverse",
+      },
+    });
 });
 
  
 
-const targetText = document.querySelector(".switch_text-en");
+const targetTexts = document.querySelectorAll(".switch_text");
+targetTexts.forEach((targetText) => {
+  gsap.timeline({ repeat: -1, repeatDelay: 0 })
+  .to(targetText, {
+    duration: 0.75,
+    
+    // opacity: 0,
+    onComplete: () => {
+      if(targetText.textContent === "scientists") {
+        targetText.textContent = "artists";
+      }
+      else if(targetText.textContent === "artists") {
+        targetText.textContent = "scientists";
+      }
 
-gsap.timeline({ repeat: -1, repeatDelay: 0 })
-.to(targetText, {
-  duration: 0.75,
-  
-  // opacity: 0,
-  onComplete: () => {
-    targetText.textContent =
-      targetText.textContent === "scientists"
-        ? "artists"
-        : "scientists"; 
-  },
-})
-.to(targetText, {
-  duration: 0.75,
-  
-  // opacity: 1,
-  ease: "power2.out",
+      if(targetText.textContent === "科學家") {
+        targetText.textContent = "藝術家";
+      }
+      else if(targetText.textContent === "藝術家") {
+        targetText.textContent = "科學家";
+      }
+    },
+  })
+  .to(targetText, {
+    duration: 0.75,
+    
+    // opacity: 1,
+    ease: "power2.out",
+  });
 });
 
 
 
 
-const salute = document.getElementById("salutation-en");
+
+const salute = document.querySelector(".salutation-en");
 
 gsap.timeline({ repeat: -1, repeatDelay: 0 })
 .to(salute, {
@@ -78,10 +91,43 @@ gsap.timeline({ repeat: -1, repeatDelay: 0 })
     else if(salute.textContent === "litterateurs") {
       salute.textContent = "scientists";
     }
-    
   },
 })
 .to(salute, {
+  duration: 0.75,
+  // opacity: 1,
+  ease: "power2.out",
+});
+
+const salute_tw = document.querySelector(".salutation-twn");
+
+gsap.timeline({ repeat: -1, repeatDelay: 0 })
+.to(salute_tw, {
+  duration: 0.75,
+  
+  // opacity: 0,
+  onComplete: () => {
+
+
+    if(salute_tw.textContent === "科學家") {
+      salute_tw.textContent = "藝術家";
+    }
+    else if(salute_tw.textContent === "藝術家") {
+      salute_tw.textContent = "工程師";
+    }
+    else if(salute_tw.textContent === "工程師") {
+      salute_tw.textContent = "設計師";
+    }
+    else if(salute_tw.textContent === "設計師") {
+      salute_tw.textContent = "文學家";
+    }
+    else if(salute_tw.textContent === "文學家") {
+      salute_tw.textContent = "科學家";
+    }
+    
+  },
+})
+.to(salute_tw, {
   duration: 0.75,
   // opacity: 1,
   ease: "power2.out",
