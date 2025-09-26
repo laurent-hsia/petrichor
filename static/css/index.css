@@ -27,7 +27,8 @@ body {
   /* background: linear-gradient(to top, #000000, #dacfb0); */
   font-family: "UbuntuMono", sans-serif;
   background-image: url('../img/bg.jpg');
-  background-position: bottom -30vh right;
+  background-position: bottom -60vh right;
+  background-color: rgba(255, 255, 255, 0);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
